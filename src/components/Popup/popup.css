@@ -1,0 +1,38 @@
+.popup{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 10;
+}
+
+.popup-modal{
+    position: absolute;
+    width: 450px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: ghostwhite;
+    border-radius: 8px;
+    padding: 20px 20px;
+}
+
+.popup-header{
+    display: inline-flex;
+    position: relative;
+    width: 100%;
+}
+
+.popup-header .left{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    width: 50%;
+}
+
+.popup-header .right{
+    text-align: right;
+    width: 50%;
+    margin-top: 5px
+}

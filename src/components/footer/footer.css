@@ -1,0 +1,44 @@
+.footer-icon{
+    height: 30px;
+    margin-right: 10px;
+}
+
+.footer-text{
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.footer-red-black{
+    background-color: rgba(68,68,68, 0.3);
+    box-shadow: 0px -3px 13px 16px rgba(68,68,68,0.3);
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    right: 20px;
+    padding: 10px 0px;
+    width: 100%;
+    text-align: right;
+}
+
+.footer-sky-white{
+    background-color: rgb(245, 254, 255,0.3);
+    box-shadow: 0px -3px 13px 16px rgb(245, 254, 255,0.3);
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    right: 20px;
+    padding: 10px 0px;
+    width: 100%;
+    text-align: right;
+}
+
+.footer-black-gold{
+    background-color: rgb(252, 198, 21,0.3);
+    box-shadow: 0px -3px 13px 16px rgb(252, 198, 21,0.3);
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    right: 20px;
+    padding: 10px 0px;
+    width: 100%;
+    text-align: right;
+}

@@ -1,0 +1,128 @@
+.header{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
+.header-red-black{
+    background-color: rgba(68,68,68, 0.3);
+    box-shadow: 0px -3px 13px 16px rgba(68,68,68,0.3);
+}
+
+.sign-in-up-red-black{
+    font-weight: 800;
+    font-size: 20px;
+    color: rgb(233, 17, 17);
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.sign-in-up-red-black:hover{
+    color: rgb(179, 0, 0);
+    transform: .3s ease-in-out;
+}
+
+.header-sky-white{
+    background-color: rgb(245, 254, 255,0.3);
+    box-shadow: 0px -3px 13px 16px rgb(245, 254, 255,0.3);
+}
+
+.sign-in-up-sky-white{
+    font-weight: 800;
+    font-size: 20px;
+    color: rgb(114, 160, 245);
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.sign-in-up-sky-white:hover{
+    color: rgb(79, 126, 212);
+    transform: .3s ease-in-out;
+}
+
+.header-black-gold{
+    background-color: rgb(252, 198, 21,0.3);
+    box-shadow: 0px -3px 13px 16px rgb(252, 198, 21,0.3);
+}
+
+
+.sign-in-up-black-gold{
+    font-weight: 800;
+    font-size: 20px;
+    color: rgb(68, 68, 68);
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.sign-in-up-black-gold:hover{
+    color: rgb(68, 68, 68);
+    transform: .3s ease-in-out;
+}
+
+.left-nav-section{
+    padding: 20px 30px;
+    text-align: right;
+}
+
+.right-nav-section{
+    padding: 20px 30px;
+}
+
+.btn-cover{
+    cursor: pointer;
+    display: inline-flex;
+    width: 24px;
+    height: 12px;
+    margin: 10px 15px;
+    border: 1px solid black;
+}
+.btn-cover:hover{
+    transform: scale(1.5);
+    transition: all .3s ease-in-out;
+}
+
+.btn-red{
+    background-color: rgb(233, 17, 17);
+    border: none;
+    width: 12px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.btn-black{
+    background-color: rgb(68, 68, 68);
+    border: none;
+    width: 12px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.btn-sky{
+    background-color: rgb(114, 160, 245);
+    border: none;
+    width: 12px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.btn-white{
+    background-color: rgb(245, 254, 255);
+    border: none;
+    width: 12px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.btn-gold{
+    background-color: rgb(252, 198, 21);
+    border: none;
+    width: 12px;
+    height: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,18 @@
+.theme-red-black{
+    background-color: rgb(68, 68, 68);
+    color: rgb(233, 17, 17);
+}
+
+.theme-sky-white{
+    background-color: rgb(245, 254, 255);
+    color: rgb(114, 160, 245);
+}
+
+.theme-black-gold{
+    background-color: rgb(252, 198, 21);
+    color: rgb(68, 68, 68);
+}
+
+.landing{
+    padding-bottom: 50px;
+}
