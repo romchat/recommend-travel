@@ -406,9 +406,13 @@ export const Login = (props) => {
                             placeholder='รหัสผ่าน'
                             id="password"
                             onKeyUp={(e)=>{
+                                if(validated){
+                                    setValidated(false);
+                                }
                                 let regex = /^([0-9A-Za-z]*)$/; //regex for type only 0-9 A-Z a-z
                                 let regex2 = /^([A-Z][0-9A-Za-z]*)$/; //regex for type only 0-9 A-Z a-z that start with A-Z
                                 let idPassword = document.getElementById('password');
+                                if(e.key === ' '){ e.preventDefault(); }
                                 if(invalidKey.indexOf(e.key) === -1 && !regex.test(e.key) && (errorMessage.password === '' || errorMessage.password === 'กรุณากรอกค่าในช่องนี้')){
                                     idPassword.classList.remove('is-valid');
                                     idPassword.classList.add('is-invalid');
@@ -428,11 +432,11 @@ export const Login = (props) => {
                         />
                         {showPassword ?
                             <span title="คลิกเพื่อดูรหัสผ่าน" className='hide-btn-password' onClick={()=>{setShowPassword(!showPassword)}}><FontAwesomeIcon icon={faEye} /></span>
-                        :
+                            :
                             <span title="คลิกเพื่อซ่อนรหัสผ่าน" className='hide-btn-password' onClick={()=>{setShowPassword(!showPassword)}}><FontAwesomeIcon icon={faEyeSlash} /></span>
                         }
+                        <Form.Control.Feedback type="invalid">{errorMessage.password === '' ? 'กรุณากรอกค่าในช่องนี้' : errorMessage.password}</Form.Control.Feedback>
                     </div>
-                    <Form.Control.Feedback type="invalid">{errorMessage.password}</Form.Control.Feedback>
                 </Form.Group>
                 <div style={{textAlign:"center",marginTop:"10px"}}>
                     <Button type="submit">Submit</Button> <Button variant="secondary" onClick={()=>{props.setToggle('')}}>Close</Button>
