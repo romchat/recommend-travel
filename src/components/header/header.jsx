@@ -23,7 +23,7 @@ export const Header = (props) => {
                         :
                             <Col style={{padding:"0"}}>
                                 <div className='right-nav-section'>
-                                    <button className={`sign-in-up-${props.themeColor}`} onClick={()=>{setToggle('login');}}>ยินดีต้อนรับ คุณ {props.loginDetail.username}</button> 
+                                    <button className={`sign-in-up-${props.themeColor}`}>ยินดีต้อนรับ คุณ {props.loginDetail.username}</button> 
                                     / 
                                     <button className={`sign-in-up-${props.themeColor}`} onClick={()=>{props.setLogin({...props.loginDetail,username: ''})}}>ลงชื่อออกจากระบบ</button>
                                 </div>
