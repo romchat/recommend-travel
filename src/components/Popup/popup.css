@@ -9,7 +9,6 @@
 .popup-modal{
     position: absolute;
     width: 450px;
-    height: 500px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -35,4 +34,27 @@
     text-align: right;
     width: 50%;
     margin-top: 5px
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.hide-btn-cover{
+    position: relative;
+}
+
+.hide-btn-password{
+    position: absolute;
+    right: 30px;
+    top: 8px;
+    color: gray;
 }

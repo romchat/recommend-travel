@@ -1,27 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Popup } from '../Popup/Popup';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './header.css'
-import { Button, Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 
 export const Header = (props) => {
     const [toggle, setToggle] = useState('');
-    
     return (
         <>
-            <Popup toggle={toggle} setToggle={setToggle.bind(this)} />
+            <Popup toggle={toggle} setToggle={setToggle.bind(this)} loginDetail={props.loginDetail} setLogin={props.setLogin.bind(this)} />
             <div className={`header header-${props.themeColor}`}>
                 <Container fluid style={{padding:"0"}}>
                     <Row style={{margin:"0"}}>
-                        <Col style={{padding:"0"}}>
-                            <div className='right-nav-section'>
-                                <button className={`sign-in-up-${props.themeColor}`} onClick={()=>{setToggle('login');}}>Sign in</button> 
-                                / 
-                                <button className={`sign-in-up-${props.themeColor}`} onClick={()=>{setToggle('register');}}>Sign up</button>
-                            </div>
-                        </Col>
+                        {props.loginDetail.username === ''?
+                            <Col style={{padding:"0"}}>
+                                <div className='right-nav-section'>
+                                    <button className={`sign-in-up-${props.themeColor}`} onClick={()=>{setToggle('login');}}>ลงชื่อเข้าใช้</button> 
+                                    / 
+                                    <button className={`sign-in-up-${props.themeColor}`} onClick={()=>{setToggle('register');}}>ลงทะเบียน</button>
+                                </div>
+                            </Col>
+                        :
+                            <Col style={{padding:"0"}}>
+                                <div className='right-nav-section'>
+                                    <button className={`sign-in-up-${props.themeColor}`} onClick={()=>{setToggle('login');}}>ยินดีต้อนรับ คุณ {props.loginDetail.username}</button> 
+                                    / 
+                                    <button className={`sign-in-up-${props.themeColor}`} onClick={()=>{props.setLogin({...props.loginDetail,username: ''})}}>ลงชื่อออกจากระบบ</button>
+                                </div>
+                            </Col>
+                        }
                         <Col style={{padding:"0"}}>
                             <div className='left-nav-section'>
                                 <div className='btn-cover' onClick={()=>{props.setTheme('red-black')}}>

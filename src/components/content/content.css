@@ -10,6 +10,7 @@
     bottom: -40px;
     opacity: 1;
     z-index: 1;
+    height: 130%;
 }
 
 .highlight .text-content{
@@ -33,10 +34,37 @@
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
+.content-area{
+    position: relative;
+    width: 700px;
+    margin: 50px auto 100px auto;
+    padding: 50px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.content-title{
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+}
+
 .first-content{
     position: relative;
+    font-size: 24px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .first-content img{
-    height: 600px;
+    height: 450px;
+    position: absolute;
+    top: -100px;
+    right: -300px;
+}
+
+.second-content{
+    position: relative;
 }

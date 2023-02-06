@@ -1,6 +1,6 @@
-import React, { useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import { Header } from '../header/header';
-import { Highlight, Content, Comment } from '../content/content';
+import { Highlight, Content } from '../content/content';
 import { Footer } from '../footer/footer';
 
 import './landing.css'
@@ -8,13 +8,13 @@ import './landing.css'
 export const Landing = () => {
 
     const [themeColor, setTheme] = useState('red-black');
+    const [loginDetail, setLogin] = useState({username : ''});
 
     return (
         <div className={`theme-${themeColor} landing`}>
-            <Header themeColor={themeColor} setTheme={setTheme.bind(this)} />
+            <Header themeColor={themeColor} setTheme={setTheme.bind(this)} loginDetail={loginDetail} setLogin={setLogin.bind(this)} />
             <Highlight />
             <Content />
-            <Comment />
             <Footer themeColor={themeColor} />
         </div>
     );
